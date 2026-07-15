@@ -72,7 +72,7 @@
          "web" : "https://github.com/dstroma/CloudStore-Driver-Dropbox"
       }
    },
-   "version" : "0.04",
+   "version" : "0.03",
    "x_contributors" : [
       "Dondi Michael Stroma <dstroma@gmail.com>"
    ],
