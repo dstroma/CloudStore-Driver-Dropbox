@@ -1,6 +1,5 @@
-Revision history for Perl extension CloudStore-Driver-Dropbox
+Revision history for Perl extension CloudStore::Driver::Dropbox
 
-{{$NEXT}}
-
-    - original version
+0.02 14 Jul 2026
+    - Separate from CloudStore
 

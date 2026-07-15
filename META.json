@@ -1,12 +1,12 @@
 {
-   "abstract" : "It's new $module",
+   "abstract" : "Dropbox driver for CloudStore",
    "author" : [
-      "Dondi Michael Stroma <dstroma@gmail.com>"
+      ", COPYRIGHT, and LICENSE"
    ],
    "dynamic_config" : 0,
    "generated_by" : "Minilla/v3.1.29, CPAN::Meta::Converter version 2.150010",
    "license" : [
-      "perl_5"
+      "unknown"
    ],
    "meta-spec" : {
       "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
@@ -42,7 +42,16 @@
       },
       "runtime" : {
          "requires" : {
-            "perl" : "5.008001"
+            "Carp" : "0",
+            "CloudStore" : "0.03",
+            "DateTime" : "0",
+            "DateTime::Format::RFC3339" : "0",
+            "Fcntl" : "0",
+            "IO::File" : "0",
+            "List::Util" : "0",
+            "Role::Tiny::With" : "0",
+            "WebService::Dropbox" : "2.00",
+            "perl" : "v5.14.0"
          }
       },
       "test" : {
@@ -52,7 +61,21 @@
       }
    },
    "release_status" : "unstable",
-   "version" : "0.01",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/dstroma/CloudStore-Driver-Dropbox/issues"
+      },
+      "homepage" : "https://github.com/dstroma/CloudStore-Driver-Dropbox",
+      "repository" : {
+         "type" : "git",
+         "url" : "https://github.com/dstroma/CloudStore-Driver-Dropbox.git",
+         "web" : "https://github.com/dstroma/CloudStore-Driver-Dropbox"
+      }
+   },
+   "version" : "0.04",
+   "x_contributors" : [
+      "Dondi Michael Stroma <dstroma@gmail.com>"
+   ],
    "x_serialization_backend" : "JSON::PP version 4.16",
    "x_static_install" : 1
 }

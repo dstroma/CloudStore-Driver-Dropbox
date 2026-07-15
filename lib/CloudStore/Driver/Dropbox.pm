@@ -1,9 +1,8 @@
 use strict;
 use warnings;
-use v5.10;
-
+use v5.14;
 package CloudStore::Driver::Dropbox;
-our $VERSION = "0.01";
+our $VERSION = '0.03';
 
 use Role::Tiny::With;
 with 'CloudStore::Role::Driver';
@@ -15,8 +14,6 @@ use List::Util 'maxstr';
 use Fcntl qw(SEEK_SET SEEK_END);
 use Carp qw(croak confess);
 use constant MB => 1024*1024;
-
-CloudStore->_register_driver('Dropbox');
 
 sub connect {
   my ($self, %params) = @_;
@@ -175,30 +172,30 @@ sub _get_fh_size {
 
 __END__
 
-=encoding utf-8
-
 =head1 NAME
 
-CloudStore::Driver::Dropbox - It's new $module
+CloudStore::Driver::Dropbox - Dropbox driver for CloudStore
+
 
 =head1 SYNOPSIS
 
-    use CloudStore::Driver::Dropbox;
+    use CloudStore;
+    my $cs = CloudStore->new(driver => 'Dropbox');
+    $cs->connect(key => $key, secret => $secret);
+    $cs->upload('myfile.txt' => 'myfile.txt');
+
 
 =head1 DESCRIPTION
 
-CloudStore::Driver::Dropbox is ...
+CloudStore::Driver::Dropbox is a Dropbox driver for Cloudstore.
+It uses WebService::Dropbox under the hood.
 
-=head1 LICENSE
 
-Copyright (C) Dondi Michael Stroma.
+=head1 AUTHOR, COPYRIGHT, and LICENSE
+
+Copyright (C) by Dondi Michael Stroma. E<lt>dstroma@gmail.comE<gt>
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.
 
-=head1 AUTHOR
-
-Dondi Michael Stroma E<lt>dstroma@gmail.comE<gt>
-
 =cut
-
